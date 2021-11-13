@@ -1,0 +1,9 @@
+<p>{{name}}</p>
+<p>{{surname}}</p>
+<p>{{email}}</p>
+
+<form method="POST" action="/users/{{_id}}">
+  <label for="email">Update email</label>
+  <input type="email" name="email" id="email" value="{{email}}" />
+  <button type="submit">Create user</button>
+</form>

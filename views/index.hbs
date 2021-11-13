@@ -1,0 +1,21 @@
+<h2>Users</h2>
+{{#each users}}
+  <p>{{name}}</p>
+  <p>{{surname}}</p>
+  <p>{{email}}</p>
+  <a href="/users/{{_id}}">check user</a>
+  <form method="POST" action="/users/{{_id}}/delete">
+    <button type="submit">Delete User</button>
+  </form>
+{{/each}}
+<h2>Create user</h2>
+
+{{! this form is going to create an object of information
+the object is going to have keys based upon the name attribute of the input
+and values based upon the value of the input }}
+<form method="POST" action="/users">
+  <input type="text" name="name" />
+  <input type="text" name="surname" />
+  <input type="email" name="email" />
+  <button type="submit">Create user</button>
+</form>
